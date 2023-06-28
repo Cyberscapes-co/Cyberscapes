@@ -41,40 +41,7 @@
       <!--
       - #SIDEBAR
     -->
-      <script>
-        function setActive(i) {
-          var classList = document.getElementsByClassName("navbar-link");
-          for (var x = 0; x < classList.length; x++) {
-            $("#" + classList[x].id).removeClass("active");
-          }
-          $("#" + i).addClass("active");
-        }
-        $(document).ready(function () {
-          $("#sidebar").load("sidebar.html");
-          $("#main-body").load("about.html");
-          setActive("about");
-        });
-        function loadAbout() {
-          $("#main-body").load("about.html");
-          setActive("about");
-        }
-        function loadResume() {
-          $("#main-body").load("resume.html");
-          setActive("resume");
-        }
-        function loadPortfolio() {
-          $("#main-body").load("portfolio.html");
-          setActive("portfolio");
-        }
-        function loadBlog() {
-          $("#main-body").load("blog.html");
-          setActive("blog");
-        }
-        function loadContact() {
-          $("#main-body").load("contact.html");
-          setActive("contact");
-        }
-      </script>
+
       <aside class="sidebar" data-sidebar>
         <div id="sidebar">
           <!-- content will be loaded here -->
@@ -85,7 +52,7 @@
       - #main-content
     -->
 
-      <div class="main-content">
+      <div class="main-content" id="container" touch-action="none">
         <!--
         - #NAVBAR
       -->
@@ -156,6 +123,43 @@
       </div>
     </main>
 
+    <!--
+      Navbar
+    -->
+    <script>
+      function setActive(i) {
+        var classList = document.getElementsByClassName("navbar-link");
+        for (var x = 0; x < classList.length; x++) {
+          $("#" + classList[x].id).removeClass("active");
+        }
+        $("#" + i).addClass("active");
+      }
+      $(document).ready(function () {
+        $("#sidebar").load("sidebar.html");
+        $("#main-body").load("about.html");
+        setActive("about");
+      });
+      function loadAbout() {
+        $("#main-body").load("about.html");
+        setActive("about");
+      }
+      function loadResume() {
+        $("#main-body").load("resume.html");
+        setActive("resume");
+      }
+      function loadPortfolio() {
+        $("#main-body").load("portfolio.html");
+        setActive("portfolio");
+      }
+      function loadBlog() {
+        $("#main-body").load("blog.html");
+        setActive("blog");
+      }
+      function loadContact() {
+        $("#main-body").load("contact.html");
+        setActive("contact");
+      }
+    </script>
     <!--
     - custom js link
   -->
