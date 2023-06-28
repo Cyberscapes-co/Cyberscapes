@@ -257,7 +257,7 @@ button {
   background: none;
   border: none;
   text-align: left;
-  cursor: pointer;
+  cursor: url("../images/cursorPointer.png"), auto;
 }
 
 input,
@@ -282,7 +282,7 @@ html {
 }
 
 body {
-  cursor: url("cursor1.png"), auto;
+  cursor: url("../images/cursorDefault.png"), auto;
   background: var(--smoky-black);
 }
 
@@ -420,7 +420,7 @@ article.active {
   padding-top: 45px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
-  cursor: pointer;
+  cursor: url("../images/cursorPointer.png"), auto;
   z-index: 1;
 }
 
