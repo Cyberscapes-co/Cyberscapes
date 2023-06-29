@@ -253,7 +253,7 @@ button {
   background: none;
   border: none;
   text-align: left;
-  cursor: url("../images/cursorPointer.png"), auto;
+  cursor: url("../images/cursorPointersm.png"), auto;
 }
 
 input,
@@ -278,7 +278,7 @@ html {
 }
 
 body {
-  cursor: url("../images/cursorDefault.png"), auto;
+  cursor: url("../images/cursorDefaultsm1.png"), auto;
   background: var(--smoky-black);
 }
 
@@ -375,7 +375,10 @@ article {
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
-
+.row {
+  display: flex;
+  gap: 10px;
+}
 .separator {
   width: 100%;
   height: 1px;
@@ -496,7 +499,7 @@ article.active {
   padding-top: 45px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
-  cursor: url("../images/cursorPointer.png"), auto;
+  cursor: url("../images/cursorPointersm.png"), auto;
   z-index: 1;
 }
 
