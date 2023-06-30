@@ -1510,6 +1510,7 @@ textarea.form-input::-webkit-resizer {
 
 /**
  * responsive larger than 580px screen
+ Problematic from here on to 1024px
  */
 
 @media (min-width: 580px) {
@@ -1972,6 +1973,7 @@ textarea.form-input::-webkit-resizer {
 
 /**
  * responsive larger than 1024px screen
+ Works fine from here on
  */
 
 @media (min-width: 1024px) {
