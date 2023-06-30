@@ -8,18 +8,18 @@ canvas.id = "meta-canvas";
 var width = canvas.width = window.innerWidth ;
 var scroller = document.getElementById("everything");
 console.log(scroller);
-var height = canvas.height = Math.max(window.innerHeight, scroller.scrollHeight);
+var height = canvas.height = Math.max(window.innerHeight, scroller.scrollHeight)+100;
 document.body.appendChild(canvas);
 var gl = canvas.getContext('webgl');
 
 var mouse = {x: 0, y: 0};
 
-var numMetaballs = 30;
+var numMetaballs = 10;
 var metaballs = [];
 var mq = window.matchMedia( "(max-width: 570px)" );
 if (mq.matches) {
     for (var i = 0; i < numMetaballs; i++) {
-        var radius = Math.random() * 60 + 55;
+        var radius = Math.random() * 60 + 100;
         metaballs.push({
           x: Math.random() * (width - 2 * radius) + radius,
           y: Math.random() * (height - 2 * radius) + radius,
@@ -31,7 +31,7 @@ if (mq.matches) {
 }
 else {
     for (var i = 0; i < numMetaballs; i++) {
-        var radius = Math.random() * 60 + 120;
+        var radius = Math.random() * 60 + 260;
         metaballs.push({
           x: Math.random() * (width - 2 * radius) + radius,
           y: Math.random() * (height - 2 * radius) + radius,
