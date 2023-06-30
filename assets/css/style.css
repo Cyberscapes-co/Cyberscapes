@@ -288,8 +288,9 @@ body {
 
 .sidebar,
 article {
+
+  padding: 15px;
   background: rgba(57, 57, 57, 0.2);
-  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
   backdrop-filter: blur( 10px );
   -webkit-backdrop-filter: blur( 10px );
   border-radius: 10px;
@@ -1948,7 +1949,7 @@ textarea.form-input::-webkit-resizer {
   .sidebar,
   article {
     width: 950px;
-    /* box-shadow: var(--shadow-5); */
+    box-shadow: var(--shadow-5);
   }
 
   /**
