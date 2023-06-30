@@ -55,7 +55,7 @@
       - #main-content
     -->
 
-      <div class="main-content" touch-action="none">
+      <div id = "everything" class="main-content" touch-action="none">
         <!--
         - #NAVBAR
       -->
@@ -146,23 +146,29 @@
         setActive("about");
       });
       function loadAbout() {
-        $("#main-body").load("about.html");
+        
+        $("#main-body").load("about.html", function() {
+          downloadJSAtOnload();});
         setActive("about");
       }
       function loadResume() {
-        $("#main-body").load("resume.html");
+        $("#main-body").load("resume.html", function() {
+          downloadJSAtOnload();});
         setActive("resume");
       }
       function loadPortfolio() {
-        $("#main-body").load("portfolio.html");
+        $("#main-body").load("portfolio.html", function() {
+          downloadJSAtOnload();});
         setActive("portfolio");
       }
       function loadBlog() {
-        $("#main-body").load("blog.html");
+        $("#main-body").load("blog.html", function() {
+          downloadJSAtOnload();});
         setActive("blog");
       }
       function loadContact() {
-        $("#main-body").load("contact.html");
+        $("#main-body").load("contact.html", function() {
+          downloadJSAtOnload();});
         setActive("contact");
       }
     </script>
@@ -172,7 +178,24 @@
 
   
   
-    <script src="./assets/js/script.js"></script>
+  <script type="text/javascript">
+    function downloadJSAtOnload() {
+      var elem = document.getElementById("metaballs");
+      if (elem) {      
+        elem.remove();
+          }
+        var element = document.createElement("script");
+        element.src = "./assets/js/script.js";
+        element.id = "metaballs";
+        document.body.appendChild(element);
+    }
+    
+    if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
+  </script>
 
     <!--
     - ionicon link

@@ -280,6 +280,7 @@ html {
 body {
   cursor: url("../images/cursorDefaultsm1.png"), auto;
   background: var(--smoky-black);
+  
 }
 
 /*-----------------------------------*\
@@ -288,11 +289,9 @@ body {
 
 .sidebar,
 article {
-
   padding: 15px;
-  background: rgba(57, 57, 57, 0.2);
-  backdrop-filter: blur( 10px );
-  -webkit-backdrop-filter: blur( 10px );
+  /* background: rgba(57, 57, 57, 0.2);
+  backdrop-filter: blur( 10px ); */
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
@@ -336,12 +335,16 @@ article {
 }
 
 article {
+  background: rgba(57, 57, 57, 0.2);
+  backdrop-filter: blur( 10px );
+  border-radius: 16px;
   display: none;
 }
 
 article.active {
   display: block;
   animation: fade 0.5s ease backwards;
+  
 }
 
 @keyframes fade {
@@ -438,6 +441,7 @@ article.active {
 \*-----------------------------------*/
 
 main {
+  
   margin: 15px 12px;
   margin-bottom: 75px;
   min-width: 259px;
@@ -448,6 +452,9 @@ main {
 \*-----------------------------------*/
 
 .sidebar {
+  background: rgba(57, 57, 57, 0.2);
+  backdrop-filter: blur( 10px );
+  border-radius: 16px;
   margin-bottom: 15px;
   max-height: 112px;
   overflow: hidden;
@@ -839,7 +846,6 @@ main {
 canvas{
   position: absolute;
   display: block;
-  
   top: 0;
   right: 0;
   bottom: 0;
@@ -1518,6 +1524,7 @@ textarea.form-input::-webkit-resizer {
     width: 520px;
     margin-inline: auto;
     padding: 30px;
+
   }
 
   .article-title {
@@ -1551,6 +1558,8 @@ textarea.form-input::-webkit-resizer {
    */
 
   .sidebar {
+    background: rgba(57, 57, 57, 0.2);
+    backdrop-filter: blur( 10px );
     max-height: 180px;
     margin-bottom: 30px;
     animation: bounceInLeft 4s ease;
@@ -1566,6 +1575,8 @@ textarea.form-input::-webkit-resizer {
 
   .mainarea {
     animation: bounceInRight 3s ease;
+
+    border-radius: 16px;
   }
 
   .avatar-box {
@@ -1949,7 +1960,7 @@ textarea.form-input::-webkit-resizer {
   .sidebar,
   article {
     width: 950px;
-    box-shadow: var(--shadow-5);
+    /* box-shadow: var(--shadow-5); */
   }
 
   /**
@@ -1964,6 +1975,7 @@ textarea.form-input::-webkit-resizer {
     position: relative;
     width: max-content;
     margin: auto;
+    
   }
 
   /**
