@@ -1,3 +1,9 @@
+<script>
+  if(!window.parentPage)
+{
+    window.location.href = "index.html"
+}
+</script>
 <article class="about active" data-page="about">
   <header>
     <h2 class="h2 article-title">About me</h2>
@@ -311,7 +317,7 @@
   </section>
 </article>
 <script>
-  // testimonials variables
+  //testimonials variables
   const testimonialsItem = document.querySelectorAll(
     "[data-testimonials-item]"
   );
