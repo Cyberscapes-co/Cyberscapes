@@ -247,7 +247,10 @@
 a {
   text-decoration: none;
 }
-
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(245, 245, 245, 0.7);
+  opacity: 1; /* Firefox */
+}
 li {
   list-style: none;
 }
@@ -306,7 +309,8 @@ article {
   /* background: rgba(57, 57, 57, 0.2);
   backdrop-filter: blur( 10px ); */
   border-radius: 10px;
-  border: 1px solid rgba( 150, 150, 150, 0.1 );
+  border: 1px solid rgba( 250, 250, 250, 0.25 );
+  
 }
 .row {
   display: flex;
@@ -315,7 +319,7 @@ article {
 .separator {
   width: 100%;
   height: 1px;
-  background: var(--jet);
+  background: rgba(250, 250, 250, 0.25);
   margin: 16px 0;
 }
 
@@ -352,11 +356,12 @@ article {
   backdrop-filter: blur( 10px );
   border-radius: 16px;
   display: none;
+  
 }
 
 article.active {
   display: block;
-  animation: fade 0.5s ease backwards;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
   
 }
 
@@ -1597,15 +1602,9 @@ textarea.form-input::-webkit-resizer {
   }
 
   .mainarea {
-    
-    transform: translatey(0px);
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
-    animation-name: bounceInRight, float;
-    animation-duration: 3s, 6s;
-    animation-delay: 0ms, 3000ms;
-    animation-timing-function: ease, ease-in-out;
-    animation-iteration-count: 1, infinite;
-    
+
+    transform: translatey(0px);
     border-radius: 16px;
   }
 
@@ -1660,13 +1659,10 @@ textarea.form-input::-webkit-resizer {
 
   .navbar {
     border-radius: 20px 20px 0 0;
-    animation-name: bounce-in-up, float;
+
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
 
-    animation-duration: 3s, 6s;
-    animation-delay: 0ms, 3000ms;
-    animation-timing-function: ease, ease-in-out;
-    animation-iteration-count: 1, infinite;
+
   }
 
   .navbar-list {
@@ -1877,12 +1873,24 @@ textarea.form-input::-webkit-resizer {
   .sidebar,
   article {
     width: 700px;
+    
   }
 
   .has-scrollbar::-webkit-scrollbar-button {
     width: 100px;
   }
 
+  .mainarea{
+    margin: auto;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+
+    width: 700px;
+    animation-name: bounceInRight, float;
+    animation-duration: 3s, 6s;
+    animation-delay: 0ms, 3000ms;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
+  }
   /**
    * SIDEBAR
    */
@@ -1895,6 +1903,14 @@ textarea.form-input::-webkit-resizer {
   /**
    * NAVBAR
    */
+
+  /* .navbar{
+    animation-name: bounce-in-up, float;
+    animation-duration: 3s, 6s;
+    animation-delay: 0ms, 3000ms;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
+  } */
 
   .navbar-link {
     --fs-8: 15px;
@@ -2015,7 +2031,17 @@ textarea.form-input::-webkit-resizer {
     margin: auto;
     
   }
+  .mainarea{
+    margin: auto;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
 
+    width: 950px;
+    animation-name: bounceInRight, float;
+    animation-duration: 3s, 6s;
+    animation-delay: 0ms, 3000ms;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
+  }
   /**
    * NAVBAR
    */
@@ -2029,6 +2055,13 @@ textarea.form-input::-webkit-resizer {
     width: max-content;
     border-radius: 0 20px;
     padding: 0 20px;
+   
+      animation-name: bounce-in-up, float;
+      animation-duration: 3s, 6s;
+      animation-delay: 0ms, 3000ms;
+      animation-timing-function: ease, ease-in-out;
+      animation-iteration-count: 1, infinite;
+    
     /* box-shadow: none; */
   }
 
@@ -2082,7 +2115,7 @@ textarea.form-input::-webkit-resizer {
 }
 
 /**
- * responsive larger than 1250px screen
+ * responsive larger than 1250px screen 
  */
 
 @media (min-width: 1250px) {
@@ -2121,8 +2154,20 @@ textarea.form-input::-webkit-resizer {
   .sidebar,
   article {
     width: auto;
+    
   }
+  .mainarea{
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+    backdrop-filter: blur( 10px ); 
 
+    margin: auto;
+    width: auto;
+    animation-name: bounceInRight, float;
+    animation-duration: 3s, 6s;
+    animation-delay: 0ms, 3000ms;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
+  }
   article {
     min-height: 100%;
   }

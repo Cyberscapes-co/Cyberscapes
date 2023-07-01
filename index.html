@@ -60,7 +60,7 @@
         - #NAVBAR
       -->
 
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
               <button
@@ -88,7 +88,7 @@
               <button
                 id="portfolio"
                 class="navbar-link"
-                onclick="loadPortfolio()"
+                onclick="loadPortfolio();"
                 data-nav-link
               >
                 Portfolio
@@ -154,15 +154,21 @@
         $("#main-body").load("resume.html", function() {
           downloadJSAtOnload();});
         setActive("resume");
+
       }
       function loadPortfolio() {
         $("#main-body").load("portfolio.html", function() {
-          downloadJSAtOnload();});
-        setActive("portfolio");
+          setTimeout(function() {
+            downloadJSAtOnload();
+          }, 2000);
+        });  setActive("portfolio"); 
       }
       function loadBlog() {
         $("#main-body").load("blog.html", function() {
-          downloadJSAtOnload();});
+          setTimeout(function() {
+            downloadJSAtOnload();
+          }, 2000);
+       });
         setActive("blog");
       }
       function loadContact() {
@@ -170,6 +176,8 @@
           downloadJSAtOnload();});
         setActive("contact");
       }
+      loadAbout();
+
     </script>
     <!--
     - custom js link
@@ -189,11 +197,11 @@
         document.body.appendChild(element);
     }
     
-    if (window.addEventListener)
-        window.addEventListener("load", downloadJSAtOnload, false);
-    else if (window.attachEvent)
-        window.attachEvent("onload", downloadJSAtOnload);
-    else window.onload = downloadJSAtOnload;
+    // if (window.addEventListener)
+    //     window.addEventListener("load", downloadJSAtOnload, false);
+    // else if (window.attachEvent)
+    //     window.attachEvent("onload", downloadJSAtOnload);
+    // else window.onload = downloadJSAtOnload;
   </script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.halo.min.js"></script>

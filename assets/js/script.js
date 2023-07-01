@@ -8,7 +8,7 @@ canvas.id = "meta-canvas";
 var width = canvas.width = window.innerWidth ;
 var scroller = document.getElementById("everything");
 console.log(scroller);
-var height = canvas.height = Math.max(window.innerHeight, scroller.scrollHeight)+100;
+var height = canvas.height = Math.max(window.innerHeight, document.documentElement.scrollHeight)+100;
 document.body.appendChild(canvas);
 var gl = canvas.getContext('webgl');
 
@@ -18,25 +18,27 @@ var numMetaballs = 10;
 var metaballs = [];
 var mq = window.matchMedia( "(max-width: 570px)" );
 if (mq.matches) {
+  numMetaballs = 15;
     for (var i = 0; i < numMetaballs; i++) {
-        var radius = Math.random() * 60 + 100;
+        var radius = Math.random() * 60 + 50;
         metaballs.push({
           x: Math.random() * (width - 2 * radius) + radius,
           y: Math.random() * (height - 2 * radius) + radius,
-          vx: (Math.random() - 0.5) * 3,
-          vy: (Math.random() - 0.5) * 3,
+          vx: (Math.random() - 0.5) * 0.7,
+          vy: (Math.random() - 0.5) * 0.7,
           r: radius * 0.75
         });
       }
 }
 else {
+  numMetaballs = 10;
     for (var i = 0; i < numMetaballs; i++) {
         var radius = Math.random() * 60 + 260;
         metaballs.push({
           x: Math.random() * (width - 2 * radius) + radius,
           y: Math.random() * (height - 2 * radius) + radius,
-          vx: (Math.random() - 0.5) * 3,
-          vy: (Math.random() - 0.5) * 3,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
           r: radius * 0.75
         });
       }
