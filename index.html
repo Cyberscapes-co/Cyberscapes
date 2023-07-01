@@ -3,6 +3,9 @@
   <head>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>window.parentPage = true;</script>
+    <script>window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }</script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -67,7 +70,7 @@
                 id="about"
                 class="navbar-link"
                 data-nav-link
-                onclick="loadAbout()"
+                onclick="window.scrollTo(0, 0); loadAbout();"
               >
                 About
               </button>
@@ -77,7 +80,7 @@
               <button
                 id="resume"
                 class="navbar-link"
-                onclick="loadResume()"
+                onclick="      window.scrollTo(0, 0); loadResume();"
                 data-nav-link
               >
                 Resume
@@ -88,7 +91,7 @@
               <button
                 id="portfolio"
                 class="navbar-link"
-                onclick="loadPortfolio();"
+                onclick="window.scrollTo(0, 0); loadPortfolio();"
                 data-nav-link
               >
                 Portfolio
@@ -99,7 +102,7 @@
               <button
                 id="blog"
                 class="navbar-link"
-                onclick="loadBlog()"
+                onclick="window.scrollTo(0, 0); loadBlog()"
                 data-nav-link
               >
                 Blog
@@ -110,7 +113,7 @@
               <button
                 id="contact"
                 class="navbar-link"
-                onclick="loadContact()"
+                onclick="window.scrollTo(0, 0); loadContact()"
                 data-nav-link
               >
                 Contact

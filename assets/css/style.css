@@ -352,11 +352,19 @@ article {
 }
 
 article {
-  background: rgba(57, 57, 57, 0.2);
-  backdrop-filter: blur( 10px );
+
   border-radius: 16px;
   display: none;
-  
+  margin: auto;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+  width: auto;
+}
+.mainarea{
+  background: rgba(57, 57, 57, 0.2);
+  backdrop-filter: blur( 10px );
+  animation: bounceInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease;  
 }
 
 article.active {
@@ -477,6 +485,9 @@ main {
   max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
+  animation: bounce-in-up;
+  animation-duration: 3s;
+  animation-timing-function: ease;  
 }
 
 .sidebar.active {
@@ -631,7 +642,9 @@ main {
   border-radius: 12px 12px 0 0;
   /* box-shadow: var(--shadow-2); */
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
-
+  animation: bounce-in-up;
+  animation-duration: 2s;
+  animation-timing-function: ease;  
   z-index: 5;
 }
 
@@ -1486,6 +1499,7 @@ textarea.form-input::-webkit-resizer {
   background: var(--bg-gradient-jet);
 }
 
+
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -1540,6 +1554,21 @@ textarea.form-input::-webkit-resizer {
   /**
    * #REUSED STYLE
    */
+   .mainarea{
+    margin: auto;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+
+    width: 950px;
+    animation-name: bounceInRight, float;
+    animation-duration: 3s, 6s;
+    animation-delay: 0ms, 3000ms;
+    animation-timing-function: ease, ease-in-out;
+    animation-iteration-count: 1, infinite;
+  }
+  /**
+   * NAVBAR
+   */
+
 
   .sidebar,
   article {
