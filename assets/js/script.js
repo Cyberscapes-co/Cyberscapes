@@ -20,7 +20,7 @@ var mq = window.matchMedia( "(max-width: 570px)" );
 if (mq.matches) {
   numMetaballs = 15;
     for (var i = 0; i < numMetaballs; i++) {
-        var radius = Math.random() * 60 + 50;
+        var radius = Math.random() * 60 + 90;
         metaballs.push({
           x: Math.random() * (width - 2 * radius) + radius,
           y: Math.random() * (height - 2 * radius) + radius,
